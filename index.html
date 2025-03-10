@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Redwood Gallery</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="" />
   </head>
   <body>
     <header class="site-header">
-      <nav class="site-navigation"></nav>
+      <nav class="header-navigation">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#">Cart</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+
+    <!-- All content besides the header and footer should be wrapped in a main element -->
+    <main>
+      <section class="banner">
+        <h1>Welcome to Redwood Gallery</h1>
+        <p>
+          This is a small-scale version of the 10' high bronze Navy
+          Mascot statue installed in 1957 and proudly displayed at the
+          Main Gate of the United States Naval Academy, Annapolis MD.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
