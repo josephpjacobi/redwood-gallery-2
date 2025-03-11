@@ -1,0 +1,190 @@
+/* NOTE: This will set the order of Specificity if I uncomment  */
+/* @layer reset, base, layout, components; */
+
+@layer reset {
+  /* NOTE: We use a reset so all browsers are on a level playing field */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /* padding is included in the width */
+  }
+
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd { */
+  * {
+    margin: 0;
+  }
+
+  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+  [role='list'] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-block-size: 100vh; /* min-height */
+    line-height: 1.6; /* default line height */
+  }
+
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance; /* helps with large text */
+  }
+
+  p,
+  li {
+    text-wrap: pretty; /* will never leave one word on a line by iteself with multi-line text */
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%; /* max-width, inline = left to right */
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+/* NOTE: Any layer that comes after reset will be overridden, if I remove @layer reset, base, layout, components  */
+
+@layer base {
+  :root {
+    /* --clr = color */
+    /* Color Styles: light, regular (no prefix), dark  */
+    --clr-dark-green: #11594f;
+    --clr-beige: #f6f2e2;
+    --clr-light-green: #e9eee2;
+    --clr-red: #ff6242;
+    --clr-white: #faf8f7;
+    --clr-pink: #f8a290;
+    --clr-grey: #3e3e3e;
+    --clr-light-grey: #999;
+
+    /* --ff = font family */
+    --ff-heading: 'Outfit', sans-serif;
+    --ff-body: 'Fira Sans', sans-serif;
+
+    /* --fs = font size */
+    /* NOTE: Categorized biggest to smallest */
+    /* NOTE: Never use pixels for font sizes for accessabilty reasons */
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 3.75rem; /* NOTE: No difference on small screen sizes */
+    --fs-1000: 3.75rem; /* NOTE: No difference on small screen sizes */
+
+    @media (width > 760px) {
+      /* NOTE: Larger screen sizes */
+      /* NOTE: This is a nested media query inside the root selector */
+      --fs-300: 0.875rem;
+      --fs-400: 1rem; /* NOTE: Could remove the vars we are redeclaring with the same values */
+      --fs-500: 1.25rem;
+      --fs-600: 1.5rem;
+      --fs-700: 2rem;
+      --fs-800: 3rem;
+      --fs-900: 5rem;
+      --fs-1000: 7.5rem;
+    }
+  }
+
+  /* Add another :root to fix VScode formatting issue */
+  :root {
+    --border-radius-1: 0.25rem;
+    --border-radius-2: 0.5rem;
+    --border-radius-3: 0.75rem;
+  }
+
+  :root {
+    /* NOTE: Put all semantic variables here, these will be what's used to style my elements, not my pimative vars. This is for readability, 'what is the purpose?' */
+    --text-body: var(--clr-dark-green);
+    --text-header: var(--clr-white);
+    --text-header-focus: var(--clr-light-grey);
+
+    --header-color: var(--clr-dark-green);
+    --background-main-section: var(--clr-beige);
+    --background-secondary-section: var(--clr-light-green);
+    --background-secondary-section-offset: var(var(--clr-dark-green))
+
+    --font-size-regular: var(--fs-700);
+  }
+
+  /* TO DO: Create semantic variables for font sizes, border radius's */
+  /* root ends */
+
+  html {
+    font-family: var(--ff-body);
+    line-height: 1.6;
+  }
+
+  body {
+    font-size: var(--font-size-regular);
+    color: var(--text-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--ff-heading);
+  }
+
+  /* customize h1 property here if I want */
+
+  a {
+  }
+
+  a:hover,
+  a:focus-visible {
+    /* NOTE: Prevents setting css on click bc an element gets focus on click, enables setting css when using keyboard nav to focus so a user can see where the focus is */
+    /* TO DO: Change this to use semantic vars, this should probably be a grey */
+    color: var(--text-header-focus);
+  }
+}
+
+@layer utilities {
+  /* could also be 'sr-only' (screen reader only), used to make sites accessible. Wrap descriptive text in a span and 'visually hide' it so screen readers pick it up */
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
