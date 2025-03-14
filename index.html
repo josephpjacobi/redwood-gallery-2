@@ -20,174 +20,216 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="header-navigation">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="#">Cart</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="wrapper" data-width="wide">
+        <div class="site-header__layout">
+          <h1>Redwood Gallery</h1>
+          <nav class="header-navigation">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="#">Cart</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <!-- All content besides the header and footer should be wrapped in a main element -->
     <main>
-      <section class="banner">
-        <!-- full width section -->
-        <h1>Welcome to Redwood Gallery</h1>
-        <p>
-          This is a small-scale version of the 10' high bronze Navy
-          Mascot statue installed in 1957 and proudly displayed at the
-          Main Gate of the United States Naval Academy, Annapolis MD.
-        </p>
-        <button>Place an order</button>
+      <section class="section hero flow" data-padding="compact">
+        <div class="wrapper" data-width="wide">
+          <h1 class="hero__title">Welcome to Redwood Gallery</h1>
+        </div>
+        <div class="wrapper" data-width="narrow">
+          <div class="hero__description flow">
+            <p>
+              This is a small-scale version of the 10' high bronze
+              Navy Mascot statue installed in 1957 and proudly
+              displayed at the Main Gate of the United States Naval
+              Academy, Annapolis MD.
+            </p>
+            <button class="button">Shop now</button>
+          </div>
+        </div>
       </section>
-      <section class="about-the-artist">
-        <!-- 80% width section -->
-        <h2>About the Artist</h2>
-        <!-- I will need 3 sections: early life, his work, his accomplishments -->
-        <!-- Selecting the section-card will display an image and one of the descriptions below -->
-        <div class="container">
-          <div class="early life">
-            <h3>Early life</h3>
-            <img
-              src="assets/early-life.jpg"
-              alt="Headshot of the artist, Clemente Spampinato"
-            />
-            <p>
-              Clemente Spampinato was born in Calabria, Italy in 1912.
-              At a young age while being schooled in the classical
-              arts in Rome, he developed a keen love for both art and
-              athletics. He became a devoted follower of top Italian
-              sporting events. He befriended many of Italy's
-              top-flight athletes including the great Olympic
-              Champions. In the 1930's & 1940's he was commissioned to
-              sculpt many Bronze Trophies & Medallions for the
-              Olympics and other Italian sporting events.
-            </p>
-            <p>
-              Although Spampinato became a successful artist in Italy,
-              he longed for much more. In 1947 he became an American
-              citizen and moved to SoHo, NY, which became his new
-              home. His newfound passion was the "American West". He
-              was inspired by the legends of American Cowboys &
-              Indians. He specialized in sport and western sculptures.
-              He lived a full life of art and sport and then quietly
-              passed away in New York in December 1993.
-            </p>
+      <section class="section">
+        <div class="wrapper" data-width="wide">
+          <div class="flow">
+            <!-- 80% width section -->
+            <h2>About the Artist</h2>
+            <!-- I will need 3 sections: early life, his work, his accomplishments -->
+            <!-- Selecting the section-card will display an image and one of the descriptions below -->
+            <div class="equal-columns">
+              <div class="card">
+                <div class="card__layout grid-flow">
+                  <img
+                    src="assets/early-life.jpg"
+                    alt="Headshot of the artist, Clemente Spampinato"
+                  />
+                  <h3 class="card__title">Early life</h3>
+                  <div>
+                    <p>
+                      Clemente Spampinato was born in Calabria, Italy
+                      in 1912. At a young age while being schooled in
+                      the classical arts in Rome, he developed a keen
+                      love for both art and athletics. He became a
+                      devoted follower of top Italian sporting events.
+                      He befriended many of Italy's top-flight
+                      athletes including the great Olympic Champions.
+                      In the 1930's & 1940's he was commissioned to
+                      sculpt many Bronze Trophies & Medallions for the
+                      Olympics and other Italian sporting events.
+                    </p>
+                    <!-- <p>
+                      Although Spampinato became a successful artist in
+                      Italy, he longed for much more. In 1947 he became
+                      an American citizen and moved to SoHo, NY, which
+                      became his new home. His newfound passion was the
+                      "American West". He was inspired by the legends of
+                      American Cowboys & Indians. He specialized in
+                      sport and western sculptures. He lived a full life
+                      of art and sport and then quietly passed away in
+                      New York in December 1993.
+                    </p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__layout grid-flow">
+                  <img
+                    src="assets/his-work.jpg"
+                    alt="Clemente working on a life-sized sculpture"
+                  />
+                  <h3 class="card__title">His work</h3>
+                  <div>
+                    <p>
+                      His sculpture captures the "essence of movement"
+                      beautifully when the human body is at the
+                      "greatest point of height, speed and dynamics".
+                      His belief that art, in particular sculpture,
+                      has its objective solidly rooted in tradition.
+                      He has been admired for his ability to bring to
+                      life the complex movements of sport and western
+                      life while at the same time maintaining a strong
+                      sense of realism. Each bronze sculpture is cast
+                      in special limited editions and is handcrafted
+                      in the "lost wax" process.
+                    </p>
+                    <!-- <p>
+                    In more recent times, Spampinato has been involved
+                    in several one-man exhibitions, including in 1968 a
+                    "Sport and Western" exhibit at the National Art
+                    Museum of Sport at the Madison Square Garden in New
+                    York. His show, a "Salute to the Olympics", held at
+                    the Abercrombie & Fitch Gallery in New York, was a
+                    gala benefit to raise funds for the 1972 Olympic
+                    Games.
+                  </p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__layout grid-flow">
+                  <img
+                    src="assets/his-accomplishments.jpg"
+                    alt="A photograph of Clemente with one of his western sculptures"
+                  />
+                  <h3 class="card__title">His accompli</h3>
+                  <div>
+                    <!-- <p>
+                    Among his many achievements, Spampinato was
+                    commissioned by the Class Committee of the United
+                    States Naval Academy to create a bronze statue of
+                    the "Navy Goat" mascot. It was installed in 1957 at
+                    Annapolis, MD. In 1974, he was selected to create
+                    the greater-than-life size bronze of the famous
+                    golfer, Bobby Jones, now on permanent display in the
+                    World Golf Hall of Fame in Pinehurst, NC. A few
+                    years later in 1980, he was chosen to exhibit his
+                    works during the XIII Winter Olympic Games at Lake
+                    Placid, NY. The United States Information Agency
+                    chose Mr. Spampinato to represent the United States
+                    in the European and Russian exhibitions entitled
+                    "Reflections: Images of America". He was a Fellow of
+                    many distinguished organizations, including the
+                    National Sculpture Society, the International
+                    American Institute and the Gold Medal Artists
+                    Committee of International Fine Arts Council.
+                  </p> -->
+                    <p>
+                      Clemente Spampinato's bronzes are displayed in
+                      many museums, galleries and both private and
+                      public collections throughout the United States,
+                      Canada and Europe. Currently, some of his
+                      sculptures can be found at the following
+                      locations: Clydes of Georgetown, Washington DC;
+                      Clydes of Gallery Place, Washington DC; National
+                      Baseball Hall of Fame, Coopertown, NY; Pro
+                      Football Hall of Fame, Canton, OH; Vintage 429
+                      Landmark Gallery, New Orleans, LA. The complete
+                      sculpture collection is on display at the
+                      Redwood Gallery in Sea Cliff, NY.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="his-work">
-            <h3>His work</h3>
-            <img
-              src="assets/his-work.jpg"
-              alt="Clemente working on a life-sized sculpture"
-            />
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrapper" data-width="narrow">
+          <div class="flow">
+            <!-- 60% width section -->
+            <h2>Place an order</h2>
+            <button class="button">Place an order</button>
             <p>
-              His sculpture captures the "essence of movement"
-              beautifully when the human body is at the "greatest
-              point of height, speed and dynamics". His belief that
-              art, in particular sculpture, has its objective solidly
-              rooted in tradition. He has been admired for his ability
-              to bring to life the complex movements of sport and
-              western life while at the same time maintaining a strong
-              sense of realism. Each bronze sculpture is cast in
-              special limited editions and is handcrafted in the "lost
-              wax" process.
+              Sport and Western Collection sculptures range in prices
+              starting from $3,000 to $15,000 and up for each Sport
+              bronze, and $5,800 to $21,000 and up for each Western
+              bronze, depending on size and subject. Many bronze
+              sculptures are available for immediate delivery while
+              others must be ordered. All bronzes can be custom
+              ordered in various dimensions and a variety of patinas.
             </p>
             <p>
-              In more recent times, Spampinato has been involved in
-              several one-man exhibitions, including in 1968 a "Sport
-              and Western" exhibit at the National Art Museum of Sport
-              at the Madison Square Garden in New York. His show, a
-              "Salute to the Olympics", held at the Abercrombie &
-              Fitch Gallery in New York, was a gala benefit to raise
-              funds for the 1972 Olympic Games.
-            </p>
-          </div>
-          <div>
-            <h3>His accomplishments</h3>
-            <img
-              src="assets/his-accomplishments.jpg"
-              alt="A photograph of Clemente with one of his western sculptures"
-            />
-            <p>
-              Among his many achievements, Spampinato was commissioned
-              by the Class Committee of the United States Naval
-              Academy to create a bronze statue of the "Navy Goat"
-              mascot. It was installed in 1957 at Annapolis, MD. In
-              1974, he was selected to create the greater-than-life
-              size bronze of the famous golfer, Bobby Jones, now on
-              permanent display in the World Golf Hall of Fame in
-              Pinehurst, NC. A few years later in 1980, he was chosen
-              to exhibit his works during the XIII Winter Olympic
-              Games at Lake Placid, NY. The United States Information
-              Agency chose Mr. Spampinato to represent the United
-              States in the European and Russian exhibitions entitled
-              "Reflections: Images of America". He was a Fellow of
-              many distinguished organizations, including the National
-              Sculpture Society, the International American Institute
-              and the Gold Medal Artists Committee of International
-              Fine Arts Council.
+              Each sculpture is created using the “Lost Wax” process
+              whereby each piece is created as a clay armature then a
+              plaster mold is made that eventually creates a wax mold
+              and finally the sculpture is cast into bronze. Therefore
+              custom order pieces may take three to five months
+              depending on size and finish. Each bronze is
+              individually created, whereby patina and sizes are
+              approximate and may vary slightly.
             </p>
             <p>
-              Clemente Spampinato's bronzes are displayed in many
-              museums, galleries and both private and public
-              collections throughout the United States, Canada and
-              Europe. Currently, some of his sculptures can be found
-              at the following locations: Clydes of Georgetown,
-              Washington DC; Clydes of Gallery Place, Washington DC;
-              National Baseball Hall of Fame, Coopertown, NY; Pro
-              Football Hall of Fame, Canton, OH; Vintage 429 Landmark
-              Gallery, New Orleans, LA. The complete sculpture
-              collection is on display at the Redwood Gallery in Sea
-              Cliff, NY.
+              Virtually any bronze in the collection can be enlarged
+              or reduced. Please contact us with your phone number and
+              best time to reach you so we can discuss your sculpture
+              requirements, price quote and delivery times. If you are
+              an art gallery owner or art dealer please contact us to
+              discuss your representing our art collection.
+            </p>
+            <p>
+              Thank you for your interest and we look forward to
+              hearing from you!
             </p>
           </div>
         </div>
       </section>
-      <section class="place-an-order">
-        <!-- 60% width section -->
-        <h2>Place an order</h2>
-        <button>Place an order</button>
-        <p>
-          Sport and Western Collection sculptures range in prices
-          starting from $3,000 to $15,000 and up for each Sport
-          bronze, and $5,800 to $21,000 and up for each Western
-          bronze, depending on size and subject. Many bronze
-          sculptures are available for immediate delivery while others
-          must be ordered. All bronzes can be custom ordered in
-          various dimensions and a variety of patinas.
-        </p>
-        <p>
-          Each sculpture is created using the “Lost Wax” process
-          whereby each piece is created as a clay armature then a
-          plaster mold is made that eventually creates a wax mold and
-          finally the sculpture is cast into bronze. Therefore custom
-          order pieces may take three to five months depending on size
-          and finish. Each bronze is individually created, whereby
-          patina and sizes are approximate and may vary slightly.
-        </p>
-        <p>
-          Virtually any bronze in the collection can be enlarged or
-          reduced. Please contact us with your phone number and best
-          time to reach you so we can discuss your sculpture
-          requirements, price quote and delivery times. If you are an
-          art gallery owner or art dealer please contact us to discuss
-          your representing our art collection.
-        </p>
-        <p>
-          Thank you for your interest and we look forward to hearing
-          from you!
-        </p>
-      </section>
-      <section class="contact">
-        <h2>Contact</h2>
-        <div>
-          <h3>Address</h3>
-          <h3>Phone</h3>
-          <h3>Email</h3>
+      <section class="section" data-width="narrow">
+        <div class="wrapper">
+          <div class="flow">
+            <h2>Contact</h2>
+            <div>
+              <h3>Address</h3>
+              <h3>Phone</h3>
+              <h3>Email</h3>
+            </div>
+          </div>
         </div>
       </section>
     </main>
