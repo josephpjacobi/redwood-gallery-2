@@ -266,6 +266,26 @@ dd { */
 
 /* one off pieces of css for individual components/elements */
 @layer components {
+  .skip-to-main:not(:focus) {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .skip-to-main {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--background-secondary-section);
+    border-radius: var(--border-radius-2);
+    color: var(--background-secondary-section-offset);
+    padding: 0.5rem;
+  }
+
   .site-header {
     padding-block: 1rem;
   }
