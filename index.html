@@ -17,13 +17,22 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="main.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="wrapper" data-width="wide">
         <div class="site-header__layout">
           <h1>Redwood Gallery</h1>
-          <nav class="header-navigation">
+          <button aria-controls="primary-nav" aria-expanded="false">
+            <span class="visually-hidden">Menu</span>
+            <img
+              class="hamburger"
+              src="assets/hamburger.svg"
+              alt=""
+            />
+          </button>
+          <nav id="primary-nav" class="header-navigation">
             <ul>
               <li>
                 <a href="/">Home</a>

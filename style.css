@@ -146,6 +146,7 @@ dd { */
 
     --font-size-paragraph: var(--fs-300);
     --font-size-regular: var(--fs-700);
+    --font-size-nav-menu-items: var(--fs-500);
 
     --equal-columns-gap: 1rem;
 
@@ -183,7 +184,6 @@ dd { */
     font-size: var(--font-size-paragraph);
   }
 
-  /* customize h1 property here if I want */
   a {
     color: var(--text-header);
   }
@@ -282,6 +282,14 @@ dd { */
     }
   }
 
+  [aria-controls='primary-nav'] {
+    display: none;
+    z-index: 100;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
   .header-navigation {
     ul {
       display: flex;
@@ -293,6 +301,58 @@ dd { */
     li {
       list-style-type: none;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (width < 760px) {
+      display: none;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: var(--font-size-nav-menu-items);
+      font-family: var(--ff-heading);
+      background-color: var(--background-secondary-section);
+      padding: 2rem;
+      border-radius: 0 0 0 --border-radius-3;
+
+      ul {
+        gap: 0;
+        flex-direction: column;
+        color: var(--text-body);
+        padding-inline-start: 0;
+        padding-inline-end: 2.5rem;
+      }
+
+      li + li {
+        margin-block-start: 1.5rem;
+        padding-block-start: 1.5rem;
+        border-top: 2px solid var(--clr-light-grey);
+      }
+
+      a {
+        color: #3e3e3e;
+      }
+    }
+  }
+
+  /* set display to block when the element before .header-nagivation has aria-expanded set to true */
+  @media (width < 760px) {
+    [aria-controls='primary-nav'] {
+      display: block;
+    }
+
+    [aria-expanded='true'] + .header-navigation {
+      display: block;
+    }
+  }
+
+  .hamburger {
+    max-width: 25px;
+    height: 25px;
+    border-radius: 0;
   }
 
   /* TO DO: how do I set the size (height) of the hero? */
@@ -300,7 +360,7 @@ dd { */
     text-align: center;
     font-size: var(--font-size-regular);
     color: var(--text-hero-title);
-    background-image: url(assets/Navy_Bill.jpg);
+    background-image: url(assets/Navy_Bill_more_opaque.png);
     background-size: cover;
     background-position: center;
     backdrop-filter: contrast(0.5);
